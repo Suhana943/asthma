@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asthma Risk Assessment Tool</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #e9ecef;
+            color: #495057;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+        .form-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-submit:hover {
+            background-color: #218838;
+        }
+        .disclaimer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #6c757d;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Asthma Risk Assessment Tool</h1>
+        <p style="text-align: center;">This tool collects data on common asthma risk factors. It's for educational purposes only and is not a substitute for professional medical advice. 🏥</p>
+    </header>
+
+    <form id="asthmaForm">
+        <div class="form-section">
+            <h2>Demographics</h2>
+            <div class="form-group">
+                <label>Select your Age Group:</label>
+                <input type="radio" id="age0-9" name="age" value="Age_0-9">
+                <label for="age0-9">0-9</label><br>
+                <input type="radio" id="age10-19" name="age" value="Age_10-19">
+                <label for="age10-19">10-19</label><br>
+                <input type="radio" id="age20-24" name="age" value="Age_20-24">
+                <label for="age20-24">20-24</label><br>
+                <input type="radio" id="age25-59" name="age" value="Age_25-59">
+                <label for="age25-59">25-59</label><br>
+                <input type="radio" id="age60+" name="age" value="Age_60+">
+                <label for="age60+">60+</label>
+            </div>
+            <div class="form-group">
+                <label>Select your Gender:</label>
+                <input type="radio" id="genderMale" name="gender" value="Gender_Male">
+                <label for="genderMale">Male</label><br>
+                <input type="radio" id="genderFemale" name="gender" value="Gender_Female">
+                <label for="genderFemale">Female</label>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Common Symptoms</h2>
+            <p>Check any symptoms you are currently experiencing:</p>
+            <div class="form-group">
+                <input type="checkbox" id="tiredness" name="symptoms" value="Tiredness">
+                <label for="tiredness">Tiredness</label><br>
+                <input type="checkbox" id="dry-cough" name="symptoms" value="Dry-Cough">
+                <label for="dry-cough">Dry Cough</label><br>
+                <input type="checkbox" id="difficulty-in-breathing" name="symptoms" value="Difficulty-in-Breathing">
+                <label for="difficulty-in-breathing">Difficulty in Breathing</label><br>
+                <input type="checkbox" id="sore-throat" name="symptoms" value="Sore-Throat">
+                <label for="sore-throat">Sore Throat</label><br>
+                <input type="checkbox" id="pains" name="symptoms" value="Pains">
+                <label for="pains">Body Pains</label><br>
+                <input type="checkbox" id="nasal-congestion" name="symptoms" value="Nasal-Congestion">
+                <label for="nasal-congestion">Nasal Congestion</label><br>
+                <input type="checkbox" id="runny-nose" name="symptoms" value="Runny-Nose">
+                <label for="runny-nose">Runny Nose</label><br>
+                <input type="checkbox" id="no-symptoms" name="symptoms" value="None_Sympton">
+                <label for="no-symptoms">I am experiencing none of these symptoms</label>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Symptom Severity</h2>
+            <div class="form-group">
+                <label>Please rate the overall severity of your symptoms:</label>
+                <input type="radio" id="severityMild" name="severity" value="Severity_Mild">
+                <label for="severityMild">Mild</label><br>
+                <input type="radio" id="severityModerate" name="severity" value="Severity_Moderate">
+                <label for="severityModerate">Moderate</label><br>
+                <input type="radio" id="severityNone" name="severity" value="Severity_None">
+                <label for="severityNone">None</label>
+            </div>
+        </div>
+        
+        <button type="submit" class="btn-submit">Assess Risk</button>
+    </form>
+
+    <div class="disclaimer">
+        <p>This tool is based on publicly available datasets and does not provide a medical diagnosis. Consult a qualified healthcare professional for any health concerns.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
